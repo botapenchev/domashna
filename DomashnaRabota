@@ -1,0 +1,37 @@
+package srsr;
+
+import java.util.Scanner;
+
+public class dr {
+	public static int t (int n) {
+		int br=0;
+		int t=1;
+			for(int i=1;i<=n;i++) {
+				int m = i;
+				do{
+				if(m%10==2) 
+				{
+					br++;
+				 break;
+				}
+				m=m/10;
+				t++;
+			    }
+				while(m/10>0);
+			}
+				return(br);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner sc = new Scanner (System.in);
+	int n;
+	do{
+		System.out.println("Въведи 5 цифрено число: ");
+		n = sc.nextInt();
+		}
+	while (n<10000 || n>99999);
+	System.out.println("Колко табели се промениха: " +t(n));	
+	}
+	}
+	
+	
