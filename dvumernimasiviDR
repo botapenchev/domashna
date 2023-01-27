@@ -4,14 +4,14 @@ public class dvumernimasivi {
 	public static void input (double [][]arr) {
 		Scanner sc = new Scanner (System.in);
 		for (int i = 0; i<arr.length; i++) {
-			for (int j = 0 ; j < arr[i].length;j++) {
-				arr[i][j] = sc.nextDouble();
+			for (int j =0;j<arr[i].length;j++) {
+				arr[i][j]=sc.nextDouble();
 		}	
 		}
 		}
 	public static void output (double [][]arr) {
-		for (int i=0;i<arr.length;i++){
-			for (int j = 0 ; j<arr[i].length;j++) {
+		for (int i=0;i < arr.length;i++){
+			for (int j=0;j < arr[i].length;j++) {
 				System.out.print("arr["+ i +"]["+ j +"] : " + arr[i][j]+ " ");
 		}
 			System.out.println("");
@@ -20,22 +20,22 @@ public class dvumernimasivi {
 	public static void avrgpositive (double [][]arr) {
 		double sum=0;
 		double br=0;
-		for(int i = 0 ; i < arr.length ; i++) {
-			for(int j = 0 ; j < arr[i].length ; j++) {
+		for(int i=0;i < arr.length;i++) {
+			for(int j=0;j < arr[i].length;j++) {
 				if(arr[i][j] > 0) {
-					br ++;
-					sum = sum + arr[i][j];
+					br++;
+					sum = sum+arr[i][j];
 			}
 			}
 		  }
-		double average = sum / br;
+		double average = sum/br;
 		System.out.println("средноаритметично от положителните елементи e" + average);
 	    }
 	public static void mimmaxelsum (double [][]arr) {
 		double max = arr[0][0];
 		double min = arr[0][0];
-		for(int i = 0 ; i < arr.length ; i++) {
-			for(int j = 0 ; j < arr[i].length ; j++) {
+		for(int i=0;i < arr.length;i++) {
+			for(int j=0;j < arr[i].length;j++) {
 				if(arr[i][j] < min)min = arr[i][j];
 				if(arr[i][j] > max)max = arr[i][j];
 			}
