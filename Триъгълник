@@ -1,0 +1,195 @@
+package sasa;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.ImageIcon;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Triangle extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtf_a;
+	private JTextField txtf_b;
+	private JTextField txtf_c;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Triangle frame = new Triangle();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Triangle() {
+		setTitle("\u0422\u0440\u0438\u044A\u0433\u044A\u043B\u043D\u0438\u043A");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 908, 548);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(240, 248, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("\u0410 =");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel.setBounds(27, 29, 38, 43);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblB = new JLabel("B =");
+		lblB.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblB.setBounds(27, 100, 38, 43);
+		contentPane.add(lblB);
+		
+		JLabel lblNewLabel_1_1 = new JLabel("C =");
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_1_1.setBounds(27, 179, 38, 43);
+		contentPane.add(lblNewLabel_1_1);
+		
+		txtf_a = new JTextField();
+		txtf_a.setBounds(75, 33, 96, 43);
+		contentPane.add(txtf_a);
+		txtf_a.setColumns(10);
+		
+		txtf_b = new JTextField();
+		txtf_b.setColumns(10);
+		txtf_b.setBounds(75, 100, 96, 43);
+		contentPane.add(txtf_b);
+		
+		txtf_c = new JTextField();
+		txtf_c.setColumns(10);
+		txtf_c.setBounds(75, 179, 96, 43);
+		contentPane.add(txtf_c);
+		
+		JLabel lbl_S = new JLabel("");
+		lbl_S.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbl_S.setBounds(27, 251, 399, 55);
+		contentPane.add(lbl_S);
+		
+		JLabel lbl_P = new JLabel("");
+		lbl_P.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbl_P.setBounds(27, 311, 414, 43);
+		contentPane.add(lbl_P);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\vdsff.png"));
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel_1.setBounds(603, 10, 281, 71);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\\u0444\u0444\u0435\u0432\u0444\u0435\u0432\u0435\u0444\u0444\u0432.png"));
+		lblNewLabel_2.setBounds(603, 100, 144, 49);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\\u0442\u0438\u0440.png"));
+		lblNewLabel_3.setBounds(303, 31, 168, 174);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lbl_wid = new JLabel("");
+		lbl_wid.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbl_wid.setBounds(27, 359, 466, 55);
+		contentPane.add(lbl_wid);
+		
+		JButton btnNewButton_2_1 = new JButton("Вид");
+		btnNewButton_2_1.setBackground(new Color(224, 255, 255));
+		btnNewButton_2_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a=Double.parseDouble(txtf_a.getText());
+				double b=Double.parseDouble(txtf_b.getText());
+				double c=Double.parseDouble(txtf_c.getText());
+				if(a!=b && b!=c)lbl_wid.setText("Видът на триъглълника е разностранен");
+				else if (a==b && a==c)lbl_wid.setText("Видът на триъглълника е равностранен");
+				else lbl_wid.setText("Видът на триъглълника е равнобедрен");
+			}
+		});
+		btnNewButton_2_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnNewButton_2_1.setBounds(382, 439, 144, 62);
+		contentPane.add(btnNewButton_2_1);
+		
+		JButton btnNewButton_3 = new JButton("\u0418\u0437\u0445\u043E\u0434");
+		btnNewButton_3.setBackground(new Color(100, 149, 237));
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnNewButton_3.setBounds(740, 439, 144, 62);
+		contentPane.add(btnNewButton_3);
+		
+		JButton btnNewButton_2 = new JButton("\u0418\u0437\u0442\u0440\u0438\u0439");
+		btnNewButton_2.setBackground(new Color(100, 149, 237));
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtf_a.setText("");
+				txtf_b.setText("");
+				txtf_c.setText("");
+				lbl_P.setText("");
+				lbl_S.setText("");
+				lbl_wid.setText("");
+			}
+		});
+		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnNewButton_2.setBounds(560, 439, 144, 62);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_1 = new JButton("\u041F\u0435\u0440\u0438\u043C\u0435\u0442\u044A\u0440");
+		btnNewButton_1.setBackground(new Color(224, 255, 255));
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double p;
+				double a=Double.parseDouble(txtf_a.getText());
+				double b=Double.parseDouble(txtf_b.getText());
+				double c=Double.parseDouble(txtf_c.getText());
+				p= a+b+c;
+				lbl_P.setText("Периметърът е равен на "+p);
+			}
+		});
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnNewButton_1.setBounds(207, 439, 144, 62);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton = new JButton("\u041B\u0438\u0446\u0435");
+		btnNewButton.setBackground(new Color(224, 255, 255));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double p;
+				double S;
+				double a=Double.parseDouble(txtf_a.getText());
+				double b=Double.parseDouble(txtf_b.getText());
+				double c=Double.parseDouble(txtf_c.getText());
+				
+				p = (a+b+c)/2;
+				S = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+				S = Math.round(S *100)/100.0;
+
+				lbl_S.setText("Лицето на триъгълника е "+S);
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnNewButton.setBounds(27, 439, 144, 62);
+		contentPane.add(btnNewButton);
+	}
+}
