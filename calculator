@@ -1,0 +1,222 @@
+package sasa;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class calculator_dr extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txt_a;
+	private JTextField txt_b;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					calculator_dr frame = new calculator_dr();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public calculator_dr() {
+		setTitle("Kalkulator");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 873, 535);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 240));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\cal.png"));
+		lblNewLabel.setBounds(580, 10, 269, 384);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("\u041A\u0410\u041B\u041A\u0423\u041B\u0410\u0422\u041E\u0420");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 78));
+		lblNewLabel_1.setBounds(10, 10, 570, 101);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("\u0420\u0435\u0448\u0435\u043D\u0438\u0435:");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		lblNewLabel_2.setBounds(10, 398, 162, 90);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lbl_r = new JLabel("");
+		lbl_r.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		lbl_r.setBounds(182, 412, 388, 60);
+		contentPane.add(lbl_r);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("A:");
+		lblNewLabel_2_1.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		lblNewLabel_2_1.setBounds(270, 215, 34, 54);
+		contentPane.add(lblNewLabel_2_1);
+		
+		JLabel lblNewLabel_2_1_1 = new JLabel("B:");
+		lblNewLabel_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		lblNewLabel_2_1_1.setBounds(270, 300, 34, 54);
+		contentPane.add(lblNewLabel_2_1_1);
+		
+		txt_a = new JTextField();
+		txt_a.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		txt_a.setBounds(327, 225, 153, 43);
+		contentPane.add(txt_a);
+		txt_a.setColumns(10);
+		
+		txt_b = new JTextField();
+		txt_b.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		txt_b.setColumns(10);
+		txt_b.setBounds(327, 310, 153, 43);
+		contentPane.add(txt_b);
+		
+		JButton btnNewButton = new JButton("A+B");
+		btnNewButton.setBackground(new Color(127, 255, 212));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a=Double.parseDouble(txt_a.getText());
+				double b=Double.parseDouble(txt_b.getText());
+				double r=a+b;
+				lbl_r.setText("A + B = " +r);
+			}
+		});
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnNewButton.setBounds(10, 159, 100, 60);
+		contentPane.add(btnNewButton);
+		
+		JButton btnAb = new JButton("A*B");
+		btnAb.setBackground(new Color(127, 255, 212));
+		btnAb.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a=Double.parseDouble(txt_a.getText());
+				double b=Double.parseDouble(txt_b.getText());
+				double r=a*b;
+				lbl_r.setText("A * B = " +r);
+			}
+		});
+		btnAb.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnAb.setBounds(10, 229, 100, 60);
+		contentPane.add(btnAb);
+		
+		JButton btnAvrg = new JButton("AVR");
+		btnAvrg.setBackground(new Color(127, 255, 212));
+		btnAvrg.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a=Double.parseDouble(txt_a.getText());
+				double b=Double.parseDouble(txt_b.getText());
+				double avrg=(a+b)/2;
+				lbl_r.setText("AVERAGE = " +avrg);
+			}
+		});
+		btnAvrg.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnAvrg.setBounds(10, 299, 100, 60);
+		contentPane.add(btnAvrg);
+		
+		JButton btnAb_1 = new JButton("A^B");
+		btnAb_1.setBackground(new Color(127, 255, 212));
+		btnAb_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a=Double.parseDouble(txt_a.getText());
+				double b=Double.parseDouble(txt_b.getText());
+				double r=Math.pow(a, b);
+				lbl_r.setText("A ^ B = " +r);
+			}
+		});
+		btnAb_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnAb_1.setBounds(120, 299, 100, 60);
+		contentPane.add(btnAb_1);
+		
+		JButton btnA = new JButton("A/B");
+		btnA.setBackground(new Color(127, 255, 212));
+		btnA.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a=Double.parseDouble(txt_a.getText());
+				double b=Double.parseDouble(txt_b.getText());
+				double r=a/b;
+				lbl_r.setText("A / B = " +r);
+			}
+		});
+		btnA.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnA.setBounds(120, 229, 100, 60);
+		contentPane.add(btnA);
+		
+		JButton btnAb_2 = new JButton("A-B");
+		btnAb_2.setBackground(new Color(127, 255, 212));
+		btnAb_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double a=Double.parseDouble(txt_a.getText());
+				double b=Double.parseDouble(txt_b.getText());
+				double r=a-b;
+				lbl_r.setText("A - B = " +r);
+			}
+		});
+		btnAb_2.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		btnAb_2.setBounds(120, 159, 100, 60);
+		contentPane.add(btnAb_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\sssssssssa.png"));
+		lblNewLabel_3.setBounds(10, 369, 560, 33);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_3_1 = new JLabel("");
+		lblNewLabel_3_1.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\sssssssssa.png"));
+		lblNewLabel_3_1.setBounds(10, 98, 560, 33);
+		contentPane.add(lblNewLabel_3_1);
+		
+		JButton btnAb_2_1 = new JButton("\u0418\u0437\u0442\u0440\u0438\u0439");
+		btnAb_2_1.setForeground(new Color(240, 248, 255));
+		btnAb_2_1.setBackground(new Color(34, 139, 34));
+		btnAb_2_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txt_a.setText("");
+				txt_b.setText("");
+				lbl_r.setText("");
+				
+			}
+		});
+		btnAb_2_1.setFont(new Font("Tahoma", Font.PLAIN, 40));
+		btnAb_2_1.setBounds(270, 143, 262, 60);
+		contentPane.add(btnAb_2_1);
+		
+		JButton btnAb_2_1_1 = new JButton("\u0418\u0437\u0445\u043E\u0434");
+		btnAb_2_1_1.setForeground(new Color(240, 248, 255));
+		btnAb_2_1_1.setBackground(new Color(34, 139, 34));
+		btnAb_2_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnAb_2_1_1.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		btnAb_2_1_1.setBounds(584, 387, 143, 101);
+		contentPane.add(btnAb_2_1_1);
+		
+		JLabel lblNewLabel_4 = new JLabel("");
+		lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\vdcaz.png"));
+		lblNewLabel_4.setBounds(735, 387, 124, 111);
+		contentPane.add(lblNewLabel_4);
+	}
+
+}
