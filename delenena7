@@ -1,0 +1,136 @@
+package sasa;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.awt.event.ActionEvent;
+
+public class delenie_na_7 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtf;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					delenie_na_7 frame = new delenie_na_7();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public delenie_na_7() {
+		setTitle("\u0414\u0435\u043B\u0435\u043D\u0435 \u043D\u0430 7");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 654, 358);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 240));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lbl = new JLabel("\u0412\u044A\u0432\u0435\u0434\u0438 \u0446\u044F\u043B\u043E \u0447\u0438\u0441\u043B\u043E:");
+		lbl.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbl.setBounds(10, 10, 197, 45);
+		contentPane.add(lbl);
+		
+		txtf = new JTextField();
+		txtf.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		txtf.setBounds(222, 10, 96, 45);
+		contentPane.add(txtf);
+		txtf.setColumns(10);
+		
+		JLabel lbl_ch = new JLabel("");
+		lbl_ch.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbl_ch.setBounds(10, 65, 598, 38);
+		contentPane.add(lbl_ch);
+		
+		JLabel lbl_s = new JLabel("");
+		lbl_s.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbl_s.setBounds(10, 121, 575, 38);
+		contentPane.add(lbl_s);
+		
+		JLabel lbl_p = new JLabel("");
+		lbl_p.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lbl_p.setBounds(10, 186, 575, 38);
+		contentPane.add(lbl_p);
+		
+		JButton btnNewButton = new JButton("\u041F\u0440\u0435\u0441\u043C\u0435\u0442\u043D\u0438");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				int ch = Integer.parseInt(txtf.getText());
+				int sum=0;
+				int p=1;
+				int br=0;
+				int arr[]=new int[ch/7];
+				for (int i=1;i<=ch;i++) {
+					if(i%7==0) { 	
+						arr[br]=i;
+						sum += i;
+						p=p*i;
+						br++;
+						lbl_ch.setText("Целите числа делящи се на 7 без остатък са: "+ Arrays.toString(arr));
+						lbl_s.setText("Сумата е: "+ sum);
+						lbl_p.setText("Произведението е: "+ p);
+					}
+					 if (i%7!=0) {
+						 lbl_ch.setText("Няма въведено цяло число делящо се на 7 без остатък ");
+					lbl_s.setText("Сумата не съществува");
+					lbl_p.setText("Произведението не съществува");
+					}	
+					 }
+				
+			
+			}
+		});
+		btnNewButton.setBackground(new Color(224, 255, 255));
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnNewButton.setBounds(10, 267, 129, 44);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_2 = new JButton("\u0418\u0437\u0445\u043E\u0434");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnNewButton_2.setBackground(new Color(224, 255, 255));
+		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnNewButton_2.setBounds(288, 267, 129, 44);
+		contentPane.add(btnNewButton_2);
+		
+		JButton btnNewButton_1 = new JButton("\u0418\u0437\u0447\u0438\u0441\u0442\u0438");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtf.setText("");
+				lbl_ch.setText("");
+				lbl_s.setText("");
+				lbl_p.setText("");
+			}
+		});
+		btnNewButton_1.setBackground(new Color(224, 255, 255));
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnNewButton_1.setBounds(149, 267, 129, 44);
+		contentPane.add(btnNewButton_1);
+	}
+}
