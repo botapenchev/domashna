@@ -1,0 +1,225 @@
+package sasa;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
+
+public class prolet_cufna extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					prolet_cufna frame = new prolet_cufna();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public prolet_cufna() {
+		setTitle("\u041F\u0420\u041E\u041B\u0415\u0422 \u0426\u042A\u0424\u041D\u0410");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 921, 690);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 250, 205));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lbl_kus = new JLabel("");
+		lbl_kus.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_kus.setFont(new Font("Times New Roman", Font.PLAIN, 25));
+		lbl_kus.setBounds(10, 613, 888, 40);
+		contentPane.add(lbl_kus);
+		
+		JLabel lbl_bg = new JLabel("");
+		lbl_bg.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\pr.png"));
+		lbl_bg.setBounds(360, 88, 187, 158);
+		contentPane.add(lbl_bg);
+		lbl_bg.setVisible(false);
+		
+		JLabel lbl_en = new JLabel("");
+		lbl_en.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\spr.png"));
+		lbl_en.setBounds(360, 88, 187, 158);
+		contentPane.add(lbl_en);
+		lbl_en.setVisible(false);
+		
+		JLabel lbl_l = new JLabel("\u0418\u0437\u0431\u0435\u0440\u0438 \u0435\u0437\u0438\u043A \u0411\u0413 / Choose a language EN");
+		lbl_l.setFont(new Font("Times New Roman", Font.PLAIN, 49));
+		lbl_l.setBounds(10, 0, 818, 78);
+		contentPane.add(lbl_l);
+		
+		JLabel lbl_s = new JLabel("");
+		lbl_s.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\дддддддддддддд.png"));
+		lbl_s.setBounds(0, 338, 277, 269);
+		contentPane.add(lbl_s);
+		lbl_s.setVisible(false);
+		
+		JLabel lbl_s_1 = new JLabel("");
+		lbl_s_1.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\tree.png"));
+		lbl_s_1.setBounds(319, 338, 277, 269);
+		contentPane.add(lbl_s_1);
+		lbl_s_1.setVisible(false);
+		
+		JLabel lbl_s_2 = new JLabel("");
+		lbl_s_2.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\пей.png"));
+		lbl_s_2.setBounds(640, 338, 267, 269);
+		contentPane.add(lbl_s_2);
+		lbl_s_2.setVisible(false);
+		
+		JButton btn_cvete = new JButton("");
+		btn_cvete.setBackground(new Color(218, 112, 214));
+		btn_cvete.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btn_cvete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lbl_s.setVisible(true);
+			}
+		});
+		btn_cvete.setBounds(0, 268, 277, 60);
+		contentPane.add(btn_cvete);
+		btn_cvete.setVisible(false);
+		
+		JButton btn_durvo = new JButton("");
+		btn_durvo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lbl_s_1.setVisible(true);
+			}
+		});
+		btn_durvo.setBackground(new Color(218, 112, 214));
+		btn_durvo.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btn_durvo.setBounds(319, 268, 277, 60);
+		contentPane.add(btn_durvo);
+		btn_durvo.setVisible(false);
+		
+		JButton btn_pejzag = new JButton("");
+		btn_pejzag.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lbl_s_2.setVisible(true);
+			}
+		});
+		btn_pejzag.setBackground(new Color(218, 112, 214));
+		btn_pejzag.setFont(new Font("Times New Roman", Font.PLAIN, 20));
+		btn_pejzag.setBounds(640, 268, 267, 60);
+		contentPane.add(btn_pejzag);
+		btn_pejzag.setVisible(false);
+		
+		JButton btn_exit = new JButton("");
+		btn_exit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btn_exit.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\x.png"));
+		btn_exit.setBounds(848, 0, 60, 60);
+		contentPane.add(btn_exit);
+		
+		JButton btn_bgg = new JButton("");
+		btn_bgg.setBackground(new Color(224, 255, 255));
+		btn_bgg.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lbl_s.setVisible(false);
+				lbl_s_1.setVisible(false);
+				lbl_s_2.setVisible(false);
+				lbl_kus.setText("");
+			}
+		});
+		btn_bgg.setBounds(10, 185, 340, 60);
+		contentPane.add(btn_bgg);
+		btn_bgg.setVisible(false);
+		
+		JButton btn_enn = new JButton("");
+		btn_enn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String ch = lbl_l.getText();  
+				String en = "Selected language: English";
+			 String bg = "Избран език: Български";
+			 
+				if (ch == en) {
+					lbl_kus.setText("Happy spring everyone, be healthy and well!");
+					
+				}
+				if (ch == bg) {
+					lbl_kus.setText("Честита пролет на всички, да бъдете живи и здрави!");
+				}
+			}
+		});
+		btn_enn.setBackground(new Color(224, 255, 255));
+		btn_enn.setBounds(558, 185, 340, 60);
+		contentPane.add(btn_enn);
+		btn_enn.setVisible(false);
+		
+		JButton btm_en = new JButton("");
+		btm_en.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn_cvete.setVisible(true);
+				btn_pejzag.setVisible(true);
+				btn_durvo.setVisible(true);
+				btn_enn.setVisible(true);
+				btn_bgg.setVisible(true);
+				lbl_l.setText("Selected language: English");
+				btn_cvete.setText("Photo of a flower");
+				btn_durvo.setText("Photo of a flowering tree");
+				btn_pejzag.setText("Photo of a landscape");	
+				btn_bgg.setText("Clear the photos ");	
+				btn_enn.setText("Fortune");
+				lbl_en.setVisible(true);
+				lbl_bg.setVisible(false);
+				lbl_s.setVisible(false);
+				lbl_s_1.setVisible(false);
+				lbl_s_2.setVisible(false);
+			}
+		});
+		btm_en.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\uk.png"));
+		btm_en.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		btm_en.setBounds(557, 85, 340, 78);
+		contentPane.add(btm_en);
+		
+		JButton btn_bg = new JButton("");
+		btn_bg.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btn_cvete.setVisible(true);
+				btn_pejzag.setVisible(true);
+				btn_durvo.setVisible(true);
+				btn_enn.setVisible(true);
+				btn_bgg.setVisible(true);
+				lbl_l.setText("Избран език: Български");
+				btn_cvete.setText("Снимка на чвете");
+				btn_durvo.setText("Снимка на цъфнало дърво");
+				btn_pejzag.setText("Снимка на пейзаж");	
+				btn_bgg.setText("Изтрий снимките");	
+				btn_enn.setText("Късметче");
+				lbl_bg.setVisible(true);
+				lbl_en.setVisible(false);
+				lbl_s.setVisible(false);
+				lbl_s_1.setVisible(false);
+				lbl_s_2.setVisible(false);
+			}
+		});
+		btn_bg.setIcon(new ImageIcon("C:\\Users\\boqn\\Downloads\\\u0431\u0431\u0431.png"));
+		btn_bg.setFont(new Font("Times New Roman", Font.BOLD, 30));
+		btn_bg.setBounds(10, 85, 340, 78);
+		contentPane.add(btn_bg);
+	}
+}
