@@ -1,0 +1,165 @@
+package srsr;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
+import java.awt.Color;
+public class avtokushta extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					avtokushta frame = new avtokushta();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public avtokushta() {
+		setTitle("Автокъща \"Adli\"");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 876, 574);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(152, 251, 152));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBackground(new Color(144, 238, 144));
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Audi", "Fiat", "Peugeot", "Volkswagen", "Mercedes"}));
+		comboBox.setBounds(10, 48, 165, 27);
+		contentPane.add(comboBox);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setBackground(new Color(144, 238, 144));
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"\u041F\u043E\u0432\u0440\u0435\u0434\u0435\u043D\u0430", "\u0427\u0438\u0441\u0442\u043E \u043D\u043E\u0432\u0430", "\u0412\u0442\u043E\u0440\u0430 \u0443\u043F\u043E\u0442\u0440\u0435\u0431\u0430"}));
+		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		comboBox_1.setBounds(688, 48, 165, 27);
+		contentPane.add(comboBox_1);
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setBackground(new Color(144, 238, 144));
+		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"\u0421\u0438\u0432", "\u0427\u0435\u0440\u0435\u043D", "\u0411\u044F\u043B", "\u0421\u0438\u043D", "\u0427\u0435\u0440\u0432\u0435\u043D"}));
+		comboBox_2.setFont(new Font("Tahoma", Font.PLAIN, 25));
+		comboBox_2.setBounds(349, 48, 165, 27);
+		contentPane.add(comboBox_2);
+		
+		JLabel lblNewLabel = new JLabel("\u041C\u043E\u0434\u0435\u043B");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblNewLabel.setBounds(10, 10, 165, 27);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("\u0426\u0432\u044F\u0442");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblNewLabel_1.setBounds(349, 10, 165, 27);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("\u0421\u044A\u0441\u0442\u043E\u044F\u043D\u0438\u0435");
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		lblNewLabel_2.setBounds(688, 11, 165, 27);
+		contentPane.add(lblNewLabel_2);
+		
+		JButton btnNewButton = new JButton("\u0426\u0435\u043D\u0430");
+		btnNewButton.setBackground(new Color(154, 205, 50));
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 40));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double cena=0;
+				double scena=0;
+				String m =(String) comboBox.getSelectedItem();
+				String c =(String) comboBox_2.getSelectedItem();
+				String s =(String) comboBox_1.getSelectedItem();
+				switch(m) {
+				case "Audi" : cena=22500;
+				break;
+				case "Fiat" : cena=17350;
+				break;
+				case "Peugeot" : cena=15000;
+				break;
+				case "Volkswagen" : cena=21700;
+				break;
+				case "Mercedes" : cena=30000;
+				break;
+				}
+				scena=cena;
+				if(c == "Червен")scena = cena - cena*0.1;
+				if(s == "Повредена")scena = cena+cena*0.25;
+				if(s == "Втора употреба")
+					scena = cena - cena *0.2;
+				JOptionPane.showMessageDialog(null, "Успешно си поръчахте кола с модел " + m + ", която е с " + c + " цвят, " + s + " на цена от " + cena + " лева.");
+					}
+		});
+		btnNewButton.setBounds(10, 468, 165, 59);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("\u0418\u0437\u0445\u043E\u0434");
+		btnNewButton_1.setBackground(new Color(154, 205, 50));
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 40));
+		btnNewButton_1.setBounds(688, 468, 165, 59);
+		contentPane.add(btnNewButton_1);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(0, 100, 0));
+		panel.setBounds(185, 0, 154, 537);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel_3_1 = new JLabel("Adli");
+		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_3_1.setFont(new Font("Stencil", Font.PLAIN, 50));
+		lblNewLabel_3_1.setBounds(0, 229, 154, 59);
+		panel.add(lblNewLabel_3_1);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(0, 100, 0));
+		panel_1.setBounds(524, 0, 154, 537);
+		contentPane.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JLabel lblNewLabel_3_2 = new JLabel("Adli");
+		lblNewLabel_3_2.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNewLabel_3_2.setFont(new Font("Stencil", Font.PLAIN, 50));
+		lblNewLabel_3_2.setBounds(0, 226, 154, 59);
+		panel_1.add(lblNewLabel_3_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("Adli");
+		lblNewLabel_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_3.setFont(new Font("Stencil", Font.PLAIN, 50));
+		lblNewLabel_3.setBounds(349, 230, 154, 59);
+		contentPane.add(lblNewLabel_3);
+	}
+}
