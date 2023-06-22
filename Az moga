@@ -1,0 +1,381 @@
+package AzMoga;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+
+public class AZMOGA extends JFrame {
+	protected boolean da = true;
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AZMOGA frame = new AZMOGA();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public AZMOGA() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 944, 641);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.RED);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel animaciq = new JLabel("");
+		animaciq.setIcon(null);
+		animaciq.setBounds(0, 0, 826, 595);
+		contentPane.add(animaciq);
+		
+		JButton bn = new JButton("");
+		bn.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame0.png")));
+				
+				
+				
+				
+			}
+		});
+		bn.setBounds(845, 0, 85, 604);
+		contentPane.add(bn);
+		
+		
+		JButton bn1 = new JButton("");
+		bn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn1.setVisible(false);
+				
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame1.png")));
+			}
+		});
+		bn1.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		
+		bn1.setBounds(845, 0, 85, 604);
+		contentPane.add(bn1);
+		
+		JButton bn2 = new JButton("");
+		bn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+             bn2.setVisible(false);
+				
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame2.png")));
+			}
+		});
+		bn2.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn2.setBounds(845, 0, 85, 604);
+		contentPane.add(bn2);
+		
+		JButton bn3 = new JButton("");
+		bn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+bn3.setVisible(false);
+				
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame3.png")));
+			}
+		});
+		bn3.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn3.setBounds(845, 0, 85, 604);
+		contentPane.add(bn3);
+		
+		JButton bn4 = new JButton("");
+		bn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+bn4.setVisible(false);
+				
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame4.png")));
+			}
+		});
+		bn4.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn4.setBounds(845, 0, 85, 604);
+		contentPane.add(bn4);
+		
+		JButton bn5 = new JButton("");
+		bn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+bn5.setVisible(false);
+animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame5.png")));
+			}
+		});
+		bn5.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn5.setBounds(845, 0, 85, 604);
+		contentPane.add(bn5);
+		
+		JButton bn6 = new JButton("");
+		bn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn6.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame6.png")));
+			}
+		});
+		bn6.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn6.setBounds(845, 0, 85, 604);
+		contentPane.add(bn6);
+		
+		JButton bn7 = new JButton("");
+		bn7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn7.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame7.png")));
+			}
+		});
+		bn7.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn7.setBounds(845, 0, 85, 604);
+		contentPane.add(bn7);
+		
+		JButton bn8 = new JButton("");
+		bn8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn8.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame8.png")));
+			}
+		});
+		bn8.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn8.setBounds(845, 0, 85, 604);
+		contentPane.add(bn8);
+		
+		JButton bn9 = new JButton("");
+		bn9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn9.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame9.png")));
+			}
+		});
+		bn9.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn9.setBounds(845, 0, 85, 604);
+		contentPane.add(bn9);
+		
+		JButton bn10 = new JButton("");
+		bn10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn10.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame10.png")));
+			}
+		});
+		bn10.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn10.setBounds(845, 0, 85, 604);
+		contentPane.add(bn10);
+		
+		JButton bn11 = new JButton("");
+		bn11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn11.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame11.png")));
+			}
+		});
+		bn11.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn11.setBounds(845, 0, 85, 604);
+		contentPane.add(bn11);
+		
+		JButton bn12 = new JButton("");
+		bn12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn12.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame12.png")));
+			}
+		});
+		bn12.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn12.setBounds(845, 0, 85, 604);
+		contentPane.add(bn12);
+		
+		JButton bn13 = new JButton("");
+		bn13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn13.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame13.png")));
+			}
+		});
+		bn13.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn13.setBounds(845, 0, 85, 604);
+		contentPane.add(bn13);
+		
+		JButton bn14 = new JButton("");
+		bn14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn14.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame14.png")));
+			}
+		});
+		bn14.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn14.setBounds(845, 0, 85, 604);
+		contentPane.add(bn14);
+		
+		JButton bn15 = new JButton("");
+		bn15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn15.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame15.png")));
+			}
+		});
+		bn15.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn15.setBounds(845, 0, 85, 604);
+		contentPane.add(bn15);
+		
+		JButton bn16 = new JButton("");
+		bn16.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn16.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame16.png")));
+			}
+		});
+		bn16.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn16.setBounds(845, 0, 85, 604);
+		contentPane.add(bn16);
+		
+		JButton bn17 = new JButton("");
+		bn17.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn17.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame17.png")));
+				
+			}
+		});
+		bn17.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn17.setBounds(845, 0, 85, 604);
+		contentPane.add(bn17);
+		
+		JButton bn18 = new JButton("");
+		bn18.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn18.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame18.png")));
+			}
+		});
+		bn18.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn18.setBounds(845, 0, 85, 604);
+		contentPane.add(bn18);
+		
+		JButton bn19 = new JButton("");
+		bn19.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn19.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame19.png")));
+			}
+		});
+		bn19.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn19.setBounds(845, 0, 85, 604);
+		contentPane.add(bn19);
+		
+		JButton bn20 = new JButton("");
+		bn20.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn20.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame20.png")));
+			}
+		});
+		bn20.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn20.setBounds(845, 0, 85, 604);
+		contentPane.add(bn20);
+		
+		JButton bn21 = new JButton("");
+		bn21.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn21.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame21.png")));
+			}
+		});
+		bn21.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn21.setBounds(845, 0, 85, 604);
+		contentPane.add(bn21);
+		
+		JButton bn22 = new JButton("");
+		bn22.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn22.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame22.png")));
+			}
+		});
+		bn22.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn22.setBounds(845, 0, 85, 604);
+		contentPane.add(bn22);
+		
+		JButton bn23 = new JButton("");
+		bn23.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn23.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame23.png")));
+			}
+		});
+		bn23.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn23.setBounds(845, 0, 85, 604);
+		contentPane.add(bn23);
+		
+		JButton bn24 = new JButton("");
+		bn24.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn24.setVisible(false);
+				animaciq.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/frame24.png")));
+			}
+		});
+		bn24.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/buton.png")));
+		bn24.setBounds(845, 0, 85, 604);
+		contentPane.add(bn24);
+		
+		JButton restart = new JButton("");
+		restart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				bn.setVisible(true);
+				bn1.setVisible(true);
+				bn2.setVisible(true);
+				bn3.setVisible(true);
+				bn4.setVisible(true);
+				bn5.setVisible(true);
+				bn6.setVisible(true);
+				bn7.setVisible(true);
+				bn8.setVisible(true);
+				bn9.setVisible(true);
+				bn10.setVisible(true);
+				bn11.setVisible(true);
+				bn12.setVisible(true);
+				bn13.setVisible(true);
+				bn14.setVisible(true);
+				bn15.setVisible(true);
+				bn16.setVisible(true);
+				bn17.setVisible(true);
+				bn18.setVisible(true);
+				bn19.setVisible(true);
+				bn20.setVisible(true);
+				bn21.setVisible(true);
+				bn22.setVisible(true);
+				bn23.setVisible(true);
+				bn24.setVisible(true);
+				
+				
+				
+			
+				animaciq.setIcon(null);
+				
+			}
+		});restart.setIcon(new ImageIcon(AZMOGA.class.getResource("/AzMoga/restart.png")));
+		restart.setBounds(845, 0, 85, 604);
+		contentPane.add(restart);
+		
+	}
+}
